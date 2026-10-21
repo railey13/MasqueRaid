@@ -16,10 +16,10 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Player
   - EnemySpawner
   - Enemy
-  - Player
-  - 
+  - Bullet
   - 
   - 
   - 
@@ -51,17 +51,21 @@ TagManager:
   - name: Grass
     uniqueID: 1338093449
     locked: 0
-  - name: EnemySpawner
+  - name: Player
     uniqueID: 379448841
     locked: 0
-  - name: Enemy
+  - name: EnemySpawner
     uniqueID: 2529952407
     locked: 0
-  - name: Player
+  - name: Enemy
     uniqueID: 2885151435
+    locked: 0
+  - name: Bullet
+    uniqueID: 2950102185
     locked: 0
   m_RenderingLayers:
   - Default
   - Ground
   - Enemy
   - Player
+  - Bullet
