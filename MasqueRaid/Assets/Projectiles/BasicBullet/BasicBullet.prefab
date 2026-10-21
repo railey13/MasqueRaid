@@ -102,9 +102,10 @@ GameObject:
   - component: {fileID: 2881690770840704416}
   - component: {fileID: 8520856308689646563}
   - component: {fileID: 6288424514237992006}
+  - component: {fileID: 7274777545376979714}
   m_Layer: 0
   m_Name: BasicBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,3 +190,15 @@ CapsuleCollider2D:
   m_Offset: {x: 1.25, y: 0}
   m_Size: {x: 0.5, y: 0.05}
   m_Direction: 1
+--- !u!114 &7274777545376979714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985579142376327261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f504c59a912814884f533fd31dcdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicBullet

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Mole
   - Treant
+  - Bullet
   layers:
   - Default
   - TransparentFX
