@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - HitObject
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX
@@ -52,6 +54,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2885151435
+    locked: 0
+  - name: Projectile
+    uniqueID: 2956783177
     locked: 0
   m_RenderingLayers:
   - Default

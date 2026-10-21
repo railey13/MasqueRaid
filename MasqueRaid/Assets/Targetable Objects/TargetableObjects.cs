@@ -11,9 +11,9 @@ public class TargetableObjects : MonoBehaviour {
         _dropCount = Random.Range(1, 3);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("PlayerBullet")) {
-            _health -= 1;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("PlayerProjectile")) {
+            _health -= other.GetComponent<PlayerProjectile>().Damage;
             if (_health <= 0) {
                 Destroy(gameObject);
                 if (_drop != null) {
