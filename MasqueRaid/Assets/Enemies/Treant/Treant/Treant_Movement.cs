@@ -6,11 +6,9 @@ using UnityEngine;
 
 public class Treant_Movement : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
+    [SerializeField]    private float speed;
 
-    [SerializeField]
-    private float rotationSpeed;
+    [SerializeField]    private float rotationSpeed;
 
     private Rigidbody2D RB2D;
     private Transform player;

@@ -7,8 +7,7 @@ public class PlayerAwarenessController : MonoBehaviour
     public bool AwareOfPlayer {  get; private set; }
     public Vector2 DirectionToPlayer { get; private set; }
 
-    [SerializeField]
-    private float playerAwarenessDistance;
+    [SerializeField]    private float playerAwarenessDistance;
     private Transform player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
