@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 7852854653549300803}
   - component: {fileID: 4689828928063372322}
   - component: {fileID: 5322547408134522758}
+  - component: {fileID: 430765504471962218}
   m_Layer: 0
   m_Name: Treant
   m_TagString: Untagged
@@ -225,3 +226,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treant_Movement
   speed: 0.05
+  rotationSpeed: 100
+--- !u!114 &430765504471962218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146524357026468061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35e650dd886db34bb93be50754fde88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwarenessController
+  playerAwarenessDistance: 5
