@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6087896870839250647}
   - component: {fileID: 451315302145074769}
   - component: {fileID: 8076393048587986431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mole
-  m_TagString: Untagged
+  m_TagString: Mole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -75,8 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc4811b5282eb0469433e6e8281dc6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mole_Movement
-  speed: 0.75
+  speed: 5
   rotationSpeed: 100
+  RB2D: {fileID: 5453012596212214049}
 --- !u!114 &451315302145074769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ GameObject:
   - component: {fileID: 2968551968458492353}
   - component: {fileID: 4986446877062229398}
   - component: {fileID: 4576773900416741973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

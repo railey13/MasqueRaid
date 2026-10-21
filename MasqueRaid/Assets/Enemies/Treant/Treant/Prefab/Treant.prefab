@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6636012578467156660}
   - component: {fileID: 5856729721463805519}
   - component: {fileID: 2555135008585483688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 4689828928063372322}
   - component: {fileID: 5322547408134522758}
   - component: {fileID: 430765504471962218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Treant
-  m_TagString: Untagged
+  m_TagString: Treant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb33c241c6db3a418d4f980d5122fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treant_Movement
-  speed: 0.05
+  speed: 5
   rotationSpeed: 100
 --- !u!114 &430765504471962218
 MonoBehaviour:
@@ -239,4 +239,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35e650dd886db34bb93be50754fde88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwarenessController
-  playerAwarenessDistance: 5
+  playerAwarenessDistance: 50

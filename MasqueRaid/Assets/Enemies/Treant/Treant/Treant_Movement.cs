@@ -31,7 +31,6 @@ public class Treant_Movement : MonoBehaviour
         UpdateTargetDirection();
         RotateTowardsTarget();
         SetVelocity();
-        //transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed*Time.deltaTime);
         
     }
 
@@ -66,6 +65,10 @@ public class Treant_Movement : MonoBehaviour
         if(targetDirection == Vector2.zero)
         {
             RB2D.linearVelocity = Vector2.zero; 
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed*Time.deltaTime);
         }
 
     }
