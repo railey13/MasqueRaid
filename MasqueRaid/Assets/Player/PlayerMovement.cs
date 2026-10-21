@@ -1,17 +1,20 @@
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    [Header("GObject Components")]
+    [Header("Components")]
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private SpriteRenderer _playerSprite;
-    [SerializeField] private PlayerAction _inputActions;
     [SerializeField] private Camera _cam;
     [SerializeField] private Transform _pointerAnchor;
 
-    [Header("Player Attributes")]
+    [Header("Movement")]
     [SerializeField] private float _playerSpeed = 2f;
+
+    private PlayerAction _inputActions;
     private Vector2 _moveDir;
+
+    public Vector2 AimDirection { get; private set; } = Vector2.right;
 
     public void Awake() {
         _inputActions = new PlayerAction();
@@ -42,6 +45,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 mouseWorldPos = _cam.ScreenToWorldPoint(mouseScreenPos);
 
         Vector2 direction = mouseWorldPos - (Vector2)_pointerAnchor.position;
+        AimDirection = direction.normalized;
         _pointerAnchor.up = -direction;
 
 
