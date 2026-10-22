@@ -8,7 +8,7 @@ public class Mole_Movement : MonoBehaviour
 {
     [SerializeField] private float speed;
 
-    [SerializeField] private float rotationSpeed;
+    //[SerializeField] private float rotationSpeed;
 
     private Rigidbody2D RB2D;
     private Transform player;
@@ -29,7 +29,7 @@ public class Mole_Movement : MonoBehaviour
     private void Update()
     {
         UpdateTargetDirection();
-        RotateTowardsTarget();
+        //RotateTowardsTarget();
         SetVelocity();
 
     }
@@ -48,6 +48,7 @@ public class Mole_Movement : MonoBehaviour
 
     }
 
+    /*
     private void RotateTowardsTarget()
     {
         if (targetDirection == Vector2.zero)
@@ -59,6 +60,7 @@ public class Mole_Movement : MonoBehaviour
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
     }
+    */
 
     private void SetVelocity()
     {

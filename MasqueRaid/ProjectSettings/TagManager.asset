@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HitObject
   - PlayerProjectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: Projectile
     uniqueID: 2956783177
+    locked: 0
+  - name: Enemy
+    uniqueID: 893874583
     locked: 0
   m_RenderingLayers:
   - Default
