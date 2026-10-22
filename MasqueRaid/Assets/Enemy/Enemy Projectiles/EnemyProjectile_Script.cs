@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class EnemyProjectile_Script : MonoBehaviour
     private Rigidbody2D RBBullet;
 
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bulletLifetime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
