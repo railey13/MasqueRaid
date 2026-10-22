@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 5518227379678954627}
   - component: {fileID: 8444285168435982227}
   - component: {fileID: 4021470046608129526}
+  - component: {fileID: 9058572674445225915}
   m_Layer: 8
   m_Name: Treant
   m_TagString: Enemy
@@ -149,6 +150,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3225871802114834170}
+  - {fileID: 7905478940214015641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6784000815202723077
@@ -254,3 +256,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDeath
   _currentEnemyHP: 5
   _maxEnemyHealth: 5
+--- !u!114 &9058572674445225915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422480836046651442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc99f560a1042c645b2641db327adaf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile_Instantiate
+  bullet: {fileID: 8763415309409140736, guid: 420db62cce1574e47b67a35b7de21b3b, type: 3}
+  bulletPos: {fileID: 7905478940214015641}
+--- !u!1 &8115391243549204311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7905478940214015641}
+  m_Layer: 0
+  m_Name: BulletPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7905478940214015641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115391243549204311}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2175969362058488016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
