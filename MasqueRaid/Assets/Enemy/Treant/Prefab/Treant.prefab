@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 7461739188813806323}
   - component: {fileID: 5518227379678954627}
   - component: {fileID: 8444285168435982227}
+  - component: {fileID: 4021470046608129526}
   m_Layer: 8
   m_Name: Treant
   m_TagString: Enemy
@@ -197,7 +198,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6422480836046651442}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -239,3 +240,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treant_Movement
   speed: 2.5
+--- !u!114 &4021470046608129526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422480836046651442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edf4e986bdaaa34dbffdab0a8aa9b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDeath
+  _currentEnemyHP: 5
+  _maxEnemyHealth: 5
