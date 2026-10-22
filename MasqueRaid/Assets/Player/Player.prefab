@@ -41,12 +41,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1446918738901488224}
+  - component: {fileID: 4735203894297144824}
   - component: {fileID: 7089417358964137995}
   - component: {fileID: 7408243006557488168}
   - component: {fileID: 8676238291717016639}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,6 +70,25 @@ Transform:
   - {fileID: 2080492211716679520}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4735203894297144824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207056581037305100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99947d94cc87874faa2d01c8312b04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  _playerMaxHealth: 50
+  _playerHealth: 50
+  _fireRate: 1
+  _projectileDmg: 1
+  _projectile: {fileID: 6067086978133894195, guid: d13279bb810dfbb4ca2a3f7cefd917c0, type: 3}
+  _anchorPos: {fileID: 4291139407631793528}
+  _healthBar: {fileID: 0}
 --- !u!114 &7089417358964137995
 MonoBehaviour:
   m_ObjectHideFlags: 0

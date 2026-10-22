@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -7,6 +8,10 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private SpriteRenderer _playerSprite;
     [SerializeField] private Camera _cam;
     [SerializeField] private Transform _pointerAnchor;
+    [SerializeField] public Transform SpawnLocation;
+    [SerializeField] private GameObject[] _towers;
+    private int _selectedTowerIndex = 0;
+
 
     [Header("Movement")]
     [SerializeField] private float _playerSpeed = 2f;
@@ -22,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Update() {
         _moveDir = _inputActions.Player.Move.ReadValue<Vector2>();
+        
         setAnim(_moveDir);
         LookAtMouse();
     }
@@ -38,6 +44,20 @@ public class PlayerMovement : MonoBehaviour {
             _playerAnimator.SetBool("isWalking", true);
         }
 
+    }
+
+    private void OnXPressed(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        Debug.Log("X pressed");
+        Instantiate(_towers[_selectedTowerIndex], SpawnLocation.position, Quaternion.identity);
+    }
+
+    private void OnQPresses(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        _selectedTowerIndex =
+            (_selectedTowerIndex + 1) % _towers.Length;
+
+        Debug.Log("Selected Tower: " + _towers[_selectedTowerIndex].name);
     }
 
     private void LookAtMouse() {
@@ -59,9 +79,15 @@ public class PlayerMovement : MonoBehaviour {
 
     public void OnEnable() {
         _inputActions.Enable();
+
+        _inputActions.Player.PlaceTower.performed += OnXPressed;
+        _inputActions.Player.Cycle.performed += OnQPresses;
     }
     public void OnDisable() {
-        _inputActions.Disable();    
+        _inputActions.Disable();
+        _inputActions.Player.PlaceTower.performed -= OnXPressed;
+        _inputActions.Player.Cycle.performed -= OnQPresses;
+
     }
 
 }

@@ -22,7 +22,7 @@ public class PlayerProjectile : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("HitObject")) {
+        if (other.CompareTag("HitObject") || other.CompareTag("Enemy")) {
             Destroy(gameObject);
         }
     }

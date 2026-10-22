@@ -3,12 +3,14 @@ using UnityEngine;
 public class TargetableObjects : MonoBehaviour {
     [Header("Object Attributes")]
     [SerializeField] private float _health;
-    [SerializeField] private GameObject _drop;
+    [SerializeField] private DroppedResource _dropPrefab;
+    [SerializeField] private int _maxDropCount = 3;
+    [SerializeField] private ScriptableDrops _drop;
 
     private int _dropCount = 1;
 
     private void Awake() {
-        _dropCount = Random.Range(1, 3);
+        _dropCount = Random.Range(1, _maxDropCount);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -17,9 +19,8 @@ public class TargetableObjects : MonoBehaviour {
             if (_health <= 0) {
                 Destroy(gameObject);
                 if (_drop != null) {
-                    for (int i = 0; i < _dropCount; i++) {
-                        Instantiate(_drop, transform.position, Quaternion.identity);
-                    }
+                    DroppedResource obj = Instantiate(_dropPrefab, transform.position, Quaternion.identity);
+                    obj.SetDrop(_drop, _dropCount);
                 }
             }
         }

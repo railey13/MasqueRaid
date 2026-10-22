@@ -7,6 +7,7 @@ TagManager:
   - HitObject
   - PlayerProjectile
   - Enemy
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Ground
   - Player
   - Enemy
-  - 
+  - Tower
   - 
   - 
   - 
@@ -61,6 +62,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 893874583
+    locked: 0
+  - name: Tower
+    uniqueID: 485491047
     locked: 0
   m_RenderingLayers:
   - Default
