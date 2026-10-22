@@ -91962,6 +91962,7 @@ RectTransform:
   - {fileID: 1981359158}
   - {fileID: 1391676763}
   - {fileID: 1673897136}
+  - {fileID: 636506327}
   m_Father: {fileID: 1420072812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -92015,6 +92016,11 @@ MonoBehaviour:
   - {fileID: 1981359159}
   - {fileID: 1391676764}
   - {fileID: 1673897137}
+--- !u!4 &1577063912 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1446918738901488224, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+  m_PrefabInstance: {fileID: 7862125954540540796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1673897135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92127,19 +92133,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b8060fd78eadfc4b9f0ab5e8e48a02a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
-  _playerMaxHealth: 50
-  _playerHealth: 50
-  _fireRate: 1
-  _projectileDmg: 1
-  _projectile: {fileID: 6067086978133894195, guid: d13279bb810dfbb4ca2a3f7cefd917c0, type: 3}
-  _anchorPos: {fileID: 1698690726}
-  _healthBar: {fileID: 1264871995}
---- !u!4 &1698690726 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4291139407631793528, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
-  m_PrefabInstance: {fileID: 7862125954540540796}
-  m_PrefabAsset: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Slots
 --- !u!1001 &1769852551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92901,6 +92895,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4735203894297144824, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+      propertyPath: _healthBar
+      value: 
+      objectReference: {fileID: 1264871995}
+    - target: {fileID: 4735203894297144824, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+      propertyPath: _projectileDmg
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089417358964137995, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+      propertyPath: SpawnLocation
+      value: 
+      objectReference: {fileID: 1577063912}
+    - target: {fileID: 7089417358964137995, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+      propertyPath: _towers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089417358964137995, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+      propertyPath: '_towers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5567551743983489436, guid: d256cc26730021840a95ac8d6143df1e, type: 3}
+    - target: {fileID: 7089417358964137995, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
+      propertyPath: '_towers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4284278536397596909, guid: e813139dbfaea884ca352b1c15de71f6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -92915,7 +92933,6 @@ SceneRoots:
   - {fileID: 2116800448}
   - {fileID: 57052380658833099}
   - {fileID: 444209718}
-  - {fileID: 1293412739}
   - {fileID: 2007078437}
   - {fileID: 1261887960}
   - {fileID: 1420072812}
