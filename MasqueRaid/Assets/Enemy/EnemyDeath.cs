@@ -1,16 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyDeath : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float _currentEnemyHP;
+    [SerializeField] private float _maxEnemyHealth;
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        destroyObject();
+
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerProjectile"))
+        {
+            _currentEnemyHP--;
+        }
+    }
+
+
+    private void destroyObject()
+    {
+        if(_currentEnemyHP <= 0)
+        {
+            _currentEnemyHP = 0;
+            Destroy(gameObject);
+        }
+    }
+
 }
