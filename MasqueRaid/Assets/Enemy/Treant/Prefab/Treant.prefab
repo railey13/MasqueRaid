@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3225871802114834170}
   - component: {fileID: 6605270966334778077}
   - component: {fileID: 3587045930328445281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 893874583
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: fcacb8ef651174659a7e3e1449b859c8, type: 3}
@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 7461739188813806323}
   - component: {fileID: 5518227379678954627}
   - component: {fileID: 6232002597934975705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Treant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

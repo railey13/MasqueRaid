@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 465657627871894130}
   - component: {fileID: 6547703767102843079}
   - component: {fileID: 3833374115701376266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ SpriteRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 893874583
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 9261801f4828c4a64962dd95cd07d553, type: 3}
@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 2595858435217050857}
   - component: {fileID: 8177496543944713330}
   - component: {fileID: 4098319614107500274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mole
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
