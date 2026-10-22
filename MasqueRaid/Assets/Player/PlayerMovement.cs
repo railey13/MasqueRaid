@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private SpriteRenderer _playerSprite;
+<<<<<<< Updated upstream
     [SerializeField] private Camera _cam;
     [SerializeField] private Transform _pointerAnchor;
 
@@ -16,6 +17,16 @@ public class PlayerMovement : MonoBehaviour {
 
     public Vector2 AimDirection { get; private set; } = Vector2.right;
 
+=======
+    [SerializeField] private PlayerAction _inputActions;
+    [SerializeField] private Camera _cam;
+    [SerializeField] private Transform _pointerAnchor;
+
+    [Header("Player Attributes")]
+    [SerializeField] private float _playerSpeed = 2f;
+    private Vector2 _moveDir;
+
+>>>>>>> Stashed changes
     public void Awake() {
         _inputActions = new PlayerAction();
     }
@@ -45,7 +56,10 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 mouseWorldPos = _cam.ScreenToWorldPoint(mouseScreenPos);
 
         Vector2 direction = mouseWorldPos - (Vector2)_pointerAnchor.position;
+<<<<<<< Updated upstream
         AimDirection = direction.normalized;
+=======
+>>>>>>> Stashed changes
         _pointerAnchor.up = -direction;
 
 

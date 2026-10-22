@@ -3,9 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< Updated upstream
   tags:
   - HitObject
   - PlayerProjectile
+=======
+<<<<<<< HEAD
+  tags:
+  - MC
+  - Enemy
+  - Treant
+=======
+  tags: []
+>>>>>>> f0b510d11df1c4cc37850c63a6bec5455fcf9da3
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -43,12 +54,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
   - name: Ground
     uniqueID: 2534980695
     locked: 0
   - name: Grass
     uniqueID: 1338093449
     locked: 0
+<<<<<<< Updated upstream
   - name: Targetable Objects
     uniqueID: 3893350403
     locked: 0
@@ -58,5 +75,11 @@ TagManager:
   - name: Projectile
     uniqueID: 2956783177
     locked: 0
+=======
+  - name: Player
+    uniqueID: 2885151435
+    locked: 0
+>>>>>>> f0b510d11df1c4cc37850c63a6bec5455fcf9da3
+>>>>>>> Stashed changes
   m_RenderingLayers:
   - Default

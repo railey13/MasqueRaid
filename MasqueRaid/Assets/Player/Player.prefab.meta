@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:MasqueRaid/Assets/Player/Player.prefab.meta
 guid: f15f277b577cde14ab259d7ef4ab2733
+========
+guid: 7019c949bc57c3b42931a97f02c6a3dc
+>>>>>>>> Stashed changes:MasqueRaid/Assets/Tiny RPG Forest/Artwork/Environment/tileset/Tileset.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
