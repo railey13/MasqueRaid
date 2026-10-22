@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6784000815202723077}
   - component: {fileID: 7461739188813806323}
   - component: {fileID: 5518227379678954627}
-  - component: {fileID: 6232002597934975705}
+  - component: {fileID: 8444285168435982227}
   m_Layer: 8
   m_Name: Treant
   m_TagString: Enemy
@@ -162,10 +162,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -176,7 +176,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7461739188813806323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.15
---- !u!114 &6232002597934975705
+--- !u!114 &8444285168435982227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,5 +238,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85ee1f168a2c394aaf8a2a66d885e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treant_Movement
-  speed: 5
-  rotationSpeed: 100
+  speed: 2.5
