@@ -107,7 +107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetableObjects
   _health: 5
-  _drop: {fileID: 6839406012891942364, guid: b9f06d69fb7bef84b96b6867bcbad8fd, type: 3}
+  _dropPrefab: {fileID: 3104794964261446467, guid: b9f06d69fb7bef84b96b6867bcbad8fd, type: 3}
+  _maxDropCount: 5
+  _drop: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
 --- !u!61 &5007208773062533153
 BoxCollider2D:
   m_ObjectHideFlags: 0
