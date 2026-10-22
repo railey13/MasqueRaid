@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyPrefab: {fileID: 6422480836046651442, guid: fe0c38878e45c1a49ba26507df9229ec, type: 3}
-  minSpawnTime: 15
-  maxSpawnTime: 30
+  minSpawnTime: 35
+  maxSpawnTime: 50
