@@ -21,7 +21,7 @@ public class Mole_Movement : MonoBehaviour
     {
         RB2D = GetComponent<Rigidbody2D>();
         playerAwareness = GetComponent<PlayerAwarenessController>();
-        player = GameObject.FindGameObjectWithTag("MC").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
 
