@@ -15,6 +15,7 @@ public class Treant_Movement : MonoBehaviour
 
     private PlayerAwareness playerAwareness;
     private Vector2 targetDirection;
+    private float changeDirectionCooldown;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -23,6 +24,7 @@ public class Treant_Movement : MonoBehaviour
         playerAwareness = GetComponent<PlayerAwareness>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        targetDirection = transform.up;
     }
 
     // Update is called once per frame
@@ -36,15 +38,32 @@ public class Treant_Movement : MonoBehaviour
 
     private void UpdateTargetDirection()
     {
+        setRandomDirection();
+        playerTargeting();
+
+    }
+
+    private void setRandomDirection()
+    {
+        changeDirectionCooldown -= Time.deltaTime;
+        
+        if(changeDirectionCooldown <= 0)
+        {
+            float angleChange = Random.Range(-90f, 90f);
+            Quaternion rotation = Quaternion.AngleAxis(angleChange, transform.forward);
+            targetDirection = rotation * targetDirection;
+
+            changeDirectionCooldown = Random.Range(1f, 5f);
+        }
+
+    }
+
+    private void playerTargeting()
+    {
         if (playerAwareness.AwareOfPlayer)
         {
             targetDirection = playerAwareness.DirectionToPlayer;
         }
-        else
-        {
-            targetDirection = Vector2.zero;
-        }
-
 
     }
 
@@ -64,14 +83,6 @@ public class Treant_Movement : MonoBehaviour
 
     private void SetVelocity()
     {
-        if (targetDirection == Vector2.zero)
-        {
-            RB2D.linearVelocity = Vector2.zero;
-        }
-        else
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-        }
-
+        transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
     }
 }

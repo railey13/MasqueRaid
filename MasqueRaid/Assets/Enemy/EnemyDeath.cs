@@ -24,11 +24,15 @@ public class EnemyDeath : MonoBehaviour
         }
     }
 
+    public UnityEvent OnDied;
+
 
     private void destroyObject()
     {
         if(_currentEnemyHP <= 0)
         {
+            OnDied.Invoke();
+
             _currentEnemyHP = 0;
             Destroy(gameObject);
         }

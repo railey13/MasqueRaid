@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 8658320717500890300}
   - component: {fileID: 8337936845027791987}
   - component: {fileID: 8075892216305249983}
+  - component: {fileID: 5549620364880641483}
   m_Layer: 8
   m_Name: Mole
   m_TagString: Enemy
@@ -256,6 +257,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDeath
   _currentEnemyHP: 2
   _maxEnemyHealth: 2
+  OnDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5549620364880641483}
+        m_TargetAssemblyTypeName: Enemy_Scoring, Assembly-CSharp
+        m_MethodName: allocateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8337936845027791987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,3 +300,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_ColliderDamage
   enemyCollisionDamage: 1
+--- !u!114 &5549620364880641483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300841658070518982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ff6ed60b9b3f344b336f58cf1d0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Scoring
+  enemyScore: 5
