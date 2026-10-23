@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 4098319614107500274}
   - component: {fileID: 8658320717500890300}
   - component: {fileID: 8337936845027791987}
+  - component: {fileID: 8075892216305249983}
   m_Layer: 8
   m_Name: Mole
   m_TagString: Enemy
@@ -270,3 +271,16 @@ MonoBehaviour:
   bullet: {fileID: 7883952409460654513, guid: f64dcbf9d4b73cb4a803afd45404c107, type: 3}
   bulletPos: {fileID: 1509402811966633018}
   enemyRange: 40
+--- !u!114 &8075892216305249983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300841658070518982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2cfefa5fbe5084ca75c41feeb28c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_ColliderDamage
+  enemyCollisionDamage: 1

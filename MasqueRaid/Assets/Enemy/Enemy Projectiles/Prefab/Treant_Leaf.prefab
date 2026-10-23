@@ -328,3 +328,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile_Script
   bulletSpeed: 5
   bulletLifetime: 3
+  bulletDamage: 10

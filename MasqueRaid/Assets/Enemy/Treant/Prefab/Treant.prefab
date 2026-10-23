@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 8444285168435982227}
   - component: {fileID: 4021470046608129526}
   - component: {fileID: 9058572674445225915}
+  - component: {fileID: 6508250154061772481}
   m_Layer: 8
   m_Name: Treant
   m_TagString: Enemy
@@ -271,6 +272,19 @@ MonoBehaviour:
   bullet: {fileID: 8763415309409140736, guid: 420db62cce1574e47b67a35b7de21b3b, type: 3}
   bulletPos: {fileID: 7905478940214015641}
   enemyRange: 35
+--- !u!114 &6508250154061772481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422480836046651442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2cfefa5fbe5084ca75c41feeb28c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_ColliderDamage
+  enemyCollisionDamage: 5
 --- !u!1 &8115391243549204311
 GameObject:
   m_ObjectHideFlags: 0

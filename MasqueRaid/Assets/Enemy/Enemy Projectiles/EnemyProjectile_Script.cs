@@ -12,6 +12,7 @@ public class EnemyProjectile_Script : MonoBehaviour
 
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifetime;
+    [SerializeField] public float bulletDamage;
 
     private float timer;
 
@@ -46,6 +47,7 @@ public class EnemyProjectile_Script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<Player>().PlayerHealth -= bulletDamage;
             Destroy(gameObject);
         }
     }
