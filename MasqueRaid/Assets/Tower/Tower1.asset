@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df30b6cbf51282b44bead85e819f45cd, type: 3}
+  m_Name: Tower1
+  m_EditorClassIdentifier: Assembly-CSharp::TowerData
+  _constructionCosts:
+  - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
+    _amount: 3
+  _towerPrefab: {fileID: 5567551743983489436, guid: d256cc26730021840a95ac8d6143df1e, type: 3}
+  _towerLevels:
+  - _damage: 1
+    _range: 3
+    _fireRate: 1
+    _upgradeCosts: []

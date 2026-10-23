@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Tower
   - Enemy Projectile
+  - Tower Projectile
   layers:
   - Default
   - TransparentFX
