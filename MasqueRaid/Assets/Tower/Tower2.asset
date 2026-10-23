@@ -20,6 +20,6 @@ MonoBehaviour:
   _towerPrefab: {fileID: 4284278536397596909, guid: e813139dbfaea884ca352b1c15de71f6, type: 3}
   _towerLevels:
   - _damage: 1
-    _range: 1
-    _fireRate: 1
+    _range: 3
+    _fireRate: 3
     _upgradeCosts: []

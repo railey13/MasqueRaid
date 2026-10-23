@@ -18,7 +18,7 @@ public class EnemyDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayerProjectile") || collision.gameObject.CompareTag("TowerProjectile"))
+        if (collision.gameObject.CompareTag("PlayerProjectile") || collision.gameObject.CompareTag("Tower Projectile"))
         {
             _currentEnemyHP--;
         }

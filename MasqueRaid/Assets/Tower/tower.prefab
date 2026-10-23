@@ -136,9 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64d9a14fe4587246b95d4fe5652d682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  _range: 20
   _enemyTag: Enemy
   _firePoint: {fileID: 7045802317179664079}
   _bulletPrefab: {fileID: 1660408632710428919, guid: 6b7b074bd4ba7fb4eb545b597c3cffd7, type: 3}
-  _towerLevelData: {fileID: 11400000, guid: b275c2d0a335ae040a4631510697cd8b, type: 2}
-  _fireRate: 1
+  _towerLevelData: {fileID: 11400000, guid: 963227565e7f7be4cb7fcb09324cb51a, type: 2}

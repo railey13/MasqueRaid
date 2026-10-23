@@ -57,7 +57,8 @@ public class Player : MonoBehaviour {
         _healthBar.SetHealth(_playerHealth);
         if (_playerHealth <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Application.Quit();
         }
     }
 
