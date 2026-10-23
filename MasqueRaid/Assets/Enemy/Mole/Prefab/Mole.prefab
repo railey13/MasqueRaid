@@ -128,6 +128,9 @@ GameObject:
   - component: {fileID: 8177496543944713330}
   - component: {fileID: 4098319614107500274}
   - component: {fileID: 8658320717500890300}
+  - component: {fileID: 8337936845027791987}
+  - component: {fileID: 8075892216305249983}
+  - component: {fileID: 5549620364880641483}
   m_Layer: 8
   m_Name: Mole
   m_TagString: Enemy
@@ -254,3 +257,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDeath
   _currentEnemyHP: 2
   _maxEnemyHealth: 2
+  OnDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5549620364880641483}
+        m_TargetAssemblyTypeName: Enemy_Scoring, Assembly-CSharp
+        m_MethodName: allocateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8337936845027791987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300841658070518982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc99f560a1042c645b2641db327adaf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile_Instantiate
+  bullet: {fileID: 7883952409460654513, guid: f64dcbf9d4b73cb4a803afd45404c107, type: 3}
+  bulletPos: {fileID: 1509402811966633018}
+  enemyRange: 40
+--- !u!114 &8075892216305249983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300841658070518982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2cfefa5fbe5084ca75c41feeb28c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_ColliderDamage
+  enemyCollisionDamage: 1
+--- !u!114 &5549620364880641483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300841658070518982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ff6ed60b9b3f344b336f58cf1d0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Scoring
+  enemyScore: 5
