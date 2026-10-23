@@ -23,8 +23,8 @@ public class Enemy_ColliderDamage : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            playerHealth = playerHealth - enemyCollisionDamage;
-            player.GetComponent<Player>().PlayerHealth = playerHealth;
+            player.GetComponent<Player>().TakeDamage(enemyCollisionDamage);
+            //player.GetComponent<Player>().PlayerHealth -= enemyCollisionDamage;
         }
     }
     

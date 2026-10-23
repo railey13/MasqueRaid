@@ -43,10 +43,20 @@ public class Player : MonoBehaviour {
     }
 
     // placeholder for taking damage
-    public void TakeDamage() {
+    /*public void TakeDamage() {
         _playerHealth -= 1f;
         _healthBar.SetHealth(_playerHealth);
         if (_playerHealth <= 0) {
+            Destroy(gameObject);
+        }
+    }*/
+
+    public void TakeDamage(float damage)
+    {
+        _playerHealth -= damage;
+        _healthBar.SetHealth(_playerHealth);
+        if (_playerHealth <= 0)
+        {
             Destroy(gameObject);
         }
     }

@@ -47,7 +47,8 @@ public class EnemyProjectile_Script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Player>().PlayerHealth -= bulletDamage;
+            collision.gameObject.GetComponent<Player>().TakeDamage(bulletDamage);
+            //collision.gameObject.GetComponent<Player>().PlayerHealth -= bulletDamage;
             Destroy(gameObject);
         }
     }
