@@ -270,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile_Instantiate
   bullet: {fileID: 8763415309409140736, guid: 420db62cce1574e47b67a35b7de21b3b, type: 3}
   bulletPos: {fileID: 7905478940214015641}
+  enemyRange: 35
 --- !u!1 &8115391243549204311
 GameObject:
   m_ObjectHideFlags: 0
