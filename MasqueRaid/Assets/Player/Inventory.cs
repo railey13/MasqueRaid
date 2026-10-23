@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Inventory : MonoBehaviour {
     public static Inventory Instance = null;
@@ -37,6 +38,26 @@ public class Inventory : MonoBehaviour {
         }
     }
 
+    public bool HasEnoughResources(ResourceCost[] costs)
+    {
+        foreach (ResourceCost cost in costs)
+        {
+            ScriptableDrops item = cost.ResourceMaterial;
+            int requiredAmount = cost.ResourceAmount;
+
+            if (!_inventory.ContainsKey(item))
+            {
+                return false;
+            }
+
+            if (_inventory[item].GetAmount() < requiredAmount)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
     public void ConsumeItem(ScriptableDrops item, int amount) {
         if (_inventory.ContainsKey(item)) {
 
@@ -48,6 +69,27 @@ public class Inventory : MonoBehaviour {
                 _inventory.Remove(item);
             }
         }   
+    }
+
+    // for testing purposes and mainly for the prevention of lets say 
+    // payer may have wood but no stone and the player may want to build a
+    // tower that requires both wood and stone, this function will check if the player has enough resources to build the tower
+    public bool ConsumeResources(ResourceCost[] costs)
+    {
+        if (!HasEnoughResources(costs))
+        {
+            return false;
+        }
+
+        foreach (ResourceCost cost in costs)
+        {
+            ScriptableDrops item = cost.ResourceMaterial;
+            int amount = cost.ResourceAmount;
+
+            ConsumeItem(item, amount);
+        }
+
+        return true;
     }
 
 }
