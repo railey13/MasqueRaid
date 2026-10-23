@@ -93339,7 +93339,7 @@ PrefabInstance:
       objectReference: {fileID: 1577063912}
     - target: {fileID: 7089417358964137995, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
       propertyPath: _towers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7089417358964137995, guid: f15f277b577cde14ab259d7ef4ab2733, type: 3}
       propertyPath: '_towers.Array.data[0]'

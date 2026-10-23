@@ -3,20 +3,27 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [Header("Targeting")]
-    [SerializeField] private float _range = 5f;
+   private float _range;
     [SerializeField] private string _enemyTag = "Enemies";
     [SerializeField] private Transform _firePoint;
     [SerializeField] private GameObject _bulletPrefab;
+    
+
+    [Header("Tower Level Data")]
+    [SerializeField] private TowerData _towerLevelData;
+    private int _currentLevel = 0;
 
     private Transform _target;
 
 
-    [Header("Shooting")]
-    [SerializeField] private float _fireRate = 1f;
+   private float _fireRate;
 
     private float _nextFireTime;
 
-
+    private void Start()
+    {
+        ApplylevelStats();
+    }
     private void FindTarget()
     {
             Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _range);
@@ -52,6 +59,17 @@ public class Tower : MonoBehaviour
         }
     
     }
+
+
+    private void ApplylevelStats()
+    {
+        TowerLevelData temp;
+        temp = _towerLevelData.TowerLevels[_currentLevel];
+        _range = temp.Range;
+        _fireRate = temp.FireRate;
+
+    }
+
 
     private void Update()
     {

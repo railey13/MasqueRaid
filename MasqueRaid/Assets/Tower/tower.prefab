@@ -140,4 +140,5 @@ MonoBehaviour:
   _enemyTag: Enemy
   _firePoint: {fileID: 7045802317179664079}
   _bulletPrefab: {fileID: 1660408632710428919, guid: 6b7b074bd4ba7fb4eb545b597c3cffd7, type: 3}
+  _towerLevelData: {fileID: 11400000, guid: b275c2d0a335ae040a4631510697cd8b, type: 2}
   _fireRate: 1

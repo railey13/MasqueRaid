@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private Camera _cam;
     [SerializeField] private Transform _pointerAnchor;
     [SerializeField] public Transform SpawnLocation;
-    [SerializeField] private GameObject[] _towers;
+    [SerializeField] private TowerData[] _towers;
     private int _selectedTowerIndex = 0;
 
 
@@ -48,8 +48,20 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnXPressed(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
+        TowerData selectedTower = _towers[_selectedTowerIndex];
         Debug.Log("X pressed");
-        Instantiate(_towers[_selectedTowerIndex], SpawnLocation.position, Quaternion.identity);
+        if (Inventory.Instance.HasEnoughResources(selectedTower.ConstructionCosts))
+        {
+            Inventory.Instance.ConsumeItem(selectedTower.ConstructionCosts[0].ResourceMaterial, selectedTower.ConstructionCosts[0].ResourceAmount);
+            Instantiate(selectedTower.TowerPrefab, SpawnLocation.position, Quaternion.identity);
+            Debug.Log("Tower placed: " + selectedTower.name);
+        
+        }
+        else
+        {
+            Debug.Log("Not enough resources to build the tower."+ selectedTower);
+        }
+        //Instantiate(_towers[_selectedTowerIndex], SpawnLocation.position, Quaternion.identity);
     }
 
     private void OnQPresses(UnityEngine.InputSystem.InputAction.CallbackContext context)
