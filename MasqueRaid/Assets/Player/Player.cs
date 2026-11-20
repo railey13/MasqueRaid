@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     [Header("Attributes")]
@@ -12,6 +13,11 @@ public class Player : MonoBehaviour {
     [SerializeField] private GameObject _projectile;
     [SerializeField] private Transform _anchorPos;
     [SerializeField] private HealthBar _healthBar;
+
+
+    public GameObject GameOver;
+    public Text GameOverText;
+
 
     private PlayerAction _inputActions;
     private PlayerMovement _playerMovement;
@@ -43,13 +49,13 @@ public class Player : MonoBehaviour {
     }
 
     // placeholder for taking damage
-    /*public void TakeDamage() {
+    public void TakeDamage() {
         _playerHealth -= 1f;
         _healthBar.SetHealth(_playerHealth);
         if (_playerHealth <= 0) {
             Destroy(gameObject);
         }
-    }*/
+    }
 
     public void TakeDamage(float damage)
     {
@@ -57,8 +63,10 @@ public class Player : MonoBehaviour {
         _healthBar.SetHealth(_playerHealth);
         if (_playerHealth <= 0)
         {
-            //Destroy(gameObject);
-            Application.Quit();
+            
+            GameOver.SetActive(true);
+            GameOverText.text = "Game Over";
+            Time.timeScale = 0f; 
         }
     }
 

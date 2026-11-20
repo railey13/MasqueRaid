@@ -14,5 +14,9 @@ public class ScoreController : MonoBehaviour
         OnScoreChanged.Invoke();
     }
 
-    
+    public void Quit() {
+        Application.Quit();
+    }
+
+
 }
