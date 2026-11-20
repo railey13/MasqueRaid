@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df30b6cbf51282b44bead85e819f45cd, type: 3}
   m_Name: TestTowerData
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
-  _constructionCosts: []
+  _constructionCosts:
+  - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
+    _amount: 3
   _towerPrefab: {fileID: 5567551743983489436, guid: d256cc26730021840a95ac8d6143df1e, type: 3}
   _towerLevels:
   - _damage: 10
@@ -20,4 +22,12 @@ MonoBehaviour:
     _fireRate: 3
     _upgradeCosts:
     - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
-      _amount: 3
+      _amount: 2
+    _sprite: {fileID: -8718737289477315493, guid: 24e95218f1b943347a64aa2313bfeb9d, type: 3}
+  - _damage: 20
+    _range: 40
+    _fireRate: 6
+    _upgradeCosts:
+    - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
+      _amount: 2
+    _sprite: {fileID: 8957324059118975939, guid: fc5c992dfc6984044ab77e6dce1061b4, type: 3}

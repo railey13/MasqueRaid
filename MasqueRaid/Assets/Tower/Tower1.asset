@@ -21,3 +21,4 @@ MonoBehaviour:
     _range: 3
     _fireRate: 1
     _upgradeCosts: []
+    _sprite: {fileID: -8718737289477315493, guid: 24e95218f1b943347a64aa2313bfeb9d, type: 3}
