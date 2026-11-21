@@ -71,6 +71,9 @@ public class Tower : MonoBehaviour
 
     public void UpgradeTower()
     {
+        Debug.Log("UpgradeTower method was called!");
+        Debug.Log("Current Level: " + _currentLevel);
+        Debug.Log("Total Levels: " + _towerLevelData.TowerLevels.Length);
         if (_currentLevel + 1 >= _towerLevelData.TowerLevels.Length)
             return;
 
@@ -79,6 +82,9 @@ public class Tower : MonoBehaviour
 
         if (Inventory.Instance.HasEnoughResources(nextLevel.UpgradeCosts))
         {
+            Debug.Log("Enough resources!");
+
+           
             // Consume upgrade costs here
             foreach (ResourceCost cost in nextLevel.UpgradeCosts)
             {
@@ -88,8 +94,13 @@ public class Tower : MonoBehaviour
                 );
             }
             _currentLevel++;
+            Debug.Log("New Tower Level: " + CurrentLevel);
 
             ApplylevelStats();
+        }
+        else
+        {
+            Debug.Log("Not enough resources!");
         }
     }
 
@@ -105,7 +116,7 @@ public class Tower : MonoBehaviour
         _spriteRenderer.sprite = temp.Sprite;
     }
 
-
+    public int CurrentLevel { get { return _currentLevel + 1; } }
 
 
     private void Update()

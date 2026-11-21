@@ -1,9 +1,16 @@
+
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class TowerSelection : MonoBehaviour
 {
     private Tower _selectedTower;
-
+    [SerializeField] private GameObject _towerupgradePanel;
+    [SerializeField] private TextMeshProUGUI _currentLevelText;
+    private void Start()
+    {
+        _towerupgradePanel.SetActive(false);
+    }
     private void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -16,8 +23,11 @@ public class TowerSelection : MonoBehaviour
                 Tower tower = hit.collider.transform.root.GetComponent<Tower>();
                 if (tower != null)
                 {
+                  //  _currentLevelText.text = "Level: " + _selectedTower.CurrentLevel;
                     _selectedTower = tower;
+                    _towerupgradePanel.SetActive(true);
                     Debug.Log("Selected Tower: " + _selectedTower.name);
+
                 }
                 else
                 {
@@ -30,7 +40,23 @@ public class TowerSelection : MonoBehaviour
             }
         }
         }
-           
+
+
+    public void UpgradeSelectedTower()
+    {
+        if (_selectedTower != null)
+        {
+            _selectedTower.UpgradeTower();
+            Debug.Log("Upgraded Tower: " + _selectedTower.name);
+        }
+        else
+        {
+            Debug.Log("No tower selected to upgrade.");
+        }
     }
-     
+    }
+
+
+
+
 
