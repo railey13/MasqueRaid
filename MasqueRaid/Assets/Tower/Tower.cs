@@ -7,7 +7,9 @@ public class Tower : MonoBehaviour
     [SerializeField] private string _enemyTag = "Enemies";
     [SerializeField] private Transform _firePoint;
     [SerializeField] private GameObject _bulletPrefab;
-    
+    private int _damage;
+    private SpriteRenderer _spriteRenderer;
+
 
     [Header("Tower Level Data")]
     [SerializeField] private TowerData _towerLevelData;
@@ -22,6 +24,7 @@ public class Tower : MonoBehaviour
 
     private void Start()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         ApplylevelStats();
     }
     private void FindTarget()
@@ -60,15 +63,60 @@ public class Tower : MonoBehaviour
     
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _range);
+    }
+
+    public void UpgradeTower()
+    {
+        Debug.Log("UpgradeTower method was called!");
+        Debug.Log("Current Level: " + _currentLevel);
+        Debug.Log("Total Levels: " + _towerLevelData.TowerLevels.Length);
+        if (_currentLevel + 1 >= _towerLevelData.TowerLevels.Length)
+            return;
+
+        TowerLevelData nextLevel =
+            _towerLevelData.TowerLevels[_currentLevel + 1];
+
+        if (Inventory.Instance.HasEnoughResources(nextLevel.UpgradeCosts))
+        {
+            Debug.Log("Enough resources!");
+
+           
+            // Consume upgrade costs here
+            foreach (ResourceCost cost in nextLevel.UpgradeCosts)
+            {
+                Inventory.Instance.ConsumeItem(
+                    cost.ResourceMaterial,
+                    cost.ResourceAmount
+                );
+            }
+            _currentLevel++;
+            Debug.Log("New Tower Level: " + CurrentLevel);
+
+            ApplylevelStats();
+        }
+        else
+        {
+            Debug.Log("Not enough resources!");
+        }
+    }
 
     private void ApplylevelStats()
     {
         TowerLevelData temp;
         temp = _towerLevelData.TowerLevels[_currentLevel];
+
+        _damage = temp.Damage;
         _range = temp.Range;
         _fireRate = temp.FireRate;
 
+        _spriteRenderer.sprite = temp.Sprite;
     }
+
+    public int CurrentLevel { get { return _currentLevel + 1; } }
 
 
     private void Update()

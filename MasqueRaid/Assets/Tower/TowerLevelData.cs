@@ -7,6 +7,7 @@ public class TowerLevelData
     [SerializeField] private float _range;
     [SerializeField] private float _fireRate;
     [SerializeField] private ResourceCost[] _upgradeCosts;
+    [SerializeField] private Sprite _sprite;
 
     public int Damage
     {
@@ -24,5 +25,10 @@ public class TowerLevelData
     public ResourceCost[] UpgradeCosts
     {
         get { return _upgradeCosts; }
+    }
+
+    public Sprite Sprite
+    {
+        get { return _sprite; }
     }
 }
