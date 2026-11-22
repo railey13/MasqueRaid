@@ -20,5 +20,14 @@ MonoBehaviour:
   - _damage: 1
     _range: 3
     _fireRate: 1
-    _upgradeCosts: []
+    _upgradeCosts:
+    - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
+      _amount: 1
     _sprite: {fileID: -8718737289477315493, guid: 24e95218f1b943347a64aa2313bfeb9d, type: 3}
+  - _damage: 1
+    _range: 3
+    _fireRate: 1
+    _upgradeCosts:
+    - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
+      _amount: 1
+    _sprite: {fileID: 8957324059118975939, guid: fc5c992dfc6984044ab77e6dce1061b4, type: 3}

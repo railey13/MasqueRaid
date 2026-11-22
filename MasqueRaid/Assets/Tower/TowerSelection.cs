@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 public class TowerSelection : MonoBehaviour
 {
     private Tower _selectedTower;
-    [SerializeField] private GameObject _towerupgradePanel;
+    [SerializeField] private GameObject _towerUpgradePanel;
     [SerializeField] private TextMeshProUGUI _currentLevelText;
     private void Start()
     {
-        _towerupgradePanel.SetActive(false);
+        _towerUpgradePanel.SetActive(false);
     }
     private void Update()
     {
@@ -23,20 +23,27 @@ public class TowerSelection : MonoBehaviour
                 Tower tower = hit.collider.transform.root.GetComponent<Tower>();
                 if (tower != null)
                 {
-                  //  _currentLevelText.text = "Level: " + _selectedTower.CurrentLevel;
+                    Debug.Log("Text reference: " + _currentLevelText);
+                    Debug.Log("Selected tower: " + _selectedTower);
+                  
                     _selectedTower = tower;
-                    _towerupgradePanel.SetActive(true);
+                    _currentLevelText.text = "Level: " + _selectedTower.CurrentLevel;
+                    _towerUpgradePanel.SetActive(true);
                     Debug.Log("Selected Tower: " + _selectedTower.name);
 
                 }
                 else
                 {
                     Debug.Log("Collider found, but no Tower component in parent!");
+                    _selectedTower = null;
+                    _towerUpgradePanel.SetActive(false);
                 }
             }
             else
             {
                 Debug.Log("Nothing hit!");
+                _selectedTower = null;
+                _towerUpgradePanel.SetActive(false);
             }
         }
         }
@@ -48,6 +55,9 @@ public class TowerSelection : MonoBehaviour
         {
             _selectedTower.UpgradeTower();
             Debug.Log("Upgraded Tower: " + _selectedTower.name);
+            _selectedTower = null;
+            _towerUpgradePanel.SetActive(false);
+           
         }
         else
         {
