@@ -87556,7 +87556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5cec644699a3f45abc059c508513ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerSelection
-  _towerupgradePanel: {fileID: 1150022644}
+  _towerUpgradePanel: {fileID: 1150022644}
   _currentLevelText: {fileID: 217983013}
 --- !u!4 &1237456897
 Transform:
