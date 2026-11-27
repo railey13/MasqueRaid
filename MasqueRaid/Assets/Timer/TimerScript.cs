@@ -28,6 +28,11 @@ public class TimerScript : MonoBehaviour
         newWaveTimerText.enabled = false;
     }
 
+    public int returnWaveCounter()
+    {
+        return waveCounter;
+    }
+
     // Update is called once per frame
     void Update()
     {

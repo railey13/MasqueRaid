@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 4021470046608129526}
   - component: {fileID: 9058572674445225915}
   - component: {fileID: 6508250154061772481}
-  - component: {fileID: 8028251850264465603}
   m_Layer: 8
   m_Name: Treant
   m_TagString: Enemy
@@ -261,7 +260,7 @@ MonoBehaviour:
   OnDied:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8028251850264465603}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Enemy_Scoring, Assembly-CSharp
         m_MethodName: allocateScore
         m_Mode: 1
@@ -301,19 +300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_ColliderDamage
   enemyCollisionDamage: 5
---- !u!114 &8028251850264465603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422480836046651442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ff6ed60b9b3f344b336f58cf1d0f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Scoring
-  enemyScore: 10
 --- !u!1 &8115391243549204311
 GameObject:
   m_ObjectHideFlags: 0

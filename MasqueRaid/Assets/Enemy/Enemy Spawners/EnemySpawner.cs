@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using TMPro;
-using UnityEngine.UI;
-
 public class EnemySpawner : MonoBehaviour
 {
     //ENEMY PREFAB
@@ -14,12 +11,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
 
-    //WAVE SPAWN TIME
-    [SerializeField] private Canvas timer;
-
     //VARIABLES
-    private int waveCounter;
     private float timeUntilSpawn;
+    private int waveCounter; //referenced from timer script
 
     private void Awake()
     {
@@ -35,6 +29,9 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             SetTimeUntilSpawn();
         }
+
+        //Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+
     }
 
     private void SetTimeUntilSpawn()
