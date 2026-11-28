@@ -22,7 +22,7 @@ MonoBehaviour:
     _fireRate: 1
     _upgradeCosts:
     - _material: {fileID: 11400000, guid: 0fd0fa736b5fdd7479ff997b80811696, type: 2}
-      _amount: 1
+      _amount: 3
     _sprite: {fileID: -8718737289477315493, guid: 24e95218f1b943347a64aa2313bfeb9d, type: 3}
   - _damage: 1
     _range: 3
