@@ -4,7 +4,7 @@ using UnityEngine;
 public class TowerLevelData
 {
     [SerializeField] private int _damage;
-    [SerializeField] private float _health;
+    [SerializeField] private int _health;
     [SerializeField] private float _range;
     [SerializeField] private float _fireRate;
     [SerializeField] private ResourceCost[] _upgradeCosts;
@@ -15,7 +15,7 @@ public class TowerLevelData
         get { return _damage; }
     }
 
-    public float Health
+    public int Health
     {
         get { return _health; }
     }

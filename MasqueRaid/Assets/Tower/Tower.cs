@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     private int _damage;
     private SpriteRenderer _spriteRenderer;
-    private float _towerHealth;
+    private int _towerHealth;
 
 
     [Header("Tower Level Data")]
