@@ -3,12 +3,13 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [Header("Targeting")]
-   private float _range;
+    private float _range;
     [SerializeField] private string _enemyTag = "Enemies";
     [SerializeField] private Transform _firePoint;
     [SerializeField] private GameObject _bulletPrefab;
     private int _damage;
     private SpriteRenderer _spriteRenderer;
+    private float _towerHealth;
 
 
     [Header("Tower Level Data")]
@@ -17,10 +18,15 @@ public class Tower : MonoBehaviour
 
     private Transform _target;
 
-
-   private float _fireRate;
+    private float _fireRate;
 
     private float _nextFireTime;
+
+    public float Damage { get { return _damage; } }
+    public float Range { get { return _range; } }
+    public float FireRate { get { return _fireRate; } } 
+    public float _TowerHealth { get { return _towerHealth; } }
+
 
     private void Start()
     {
@@ -29,10 +35,11 @@ public class Tower : MonoBehaviour
     }
     private void FindTarget()
     {
-            Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _range);
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _range);
         Transform nearestEnemey = null;
         float nearestDistance = Mathf.Infinity;
-            foreach(Collider2D enemy in enemiesInRange)
+
+        foreach(Collider2D enemy in enemiesInRange)
         {
             if (enemy.CompareTag(_enemyTag))
             {
@@ -45,10 +52,10 @@ public class Tower : MonoBehaviour
             }
         }
 
-            _target = nearestEnemey;
+        _target = nearestEnemey;
     }
 
-    private  void Shoot()
+    private void Shoot()
     {
         if (Time.time >= _nextFireTime)
         {
@@ -110,6 +117,7 @@ public class Tower : MonoBehaviour
         temp = _towerLevelData.TowerLevels[_currentLevel];
 
         _damage = temp.Damage;
+        _towerHealth = temp.Health;
         _range = temp.Range;
         _fireRate = temp.FireRate;
 

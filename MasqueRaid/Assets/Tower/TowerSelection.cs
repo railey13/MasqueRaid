@@ -6,7 +6,7 @@ public class TowerSelection : MonoBehaviour
 {
     private Tower _selectedTower;
     [SerializeField] private GameObject _towerUpgradePanel;
-    [SerializeField] private TextMeshProUGUI _currentLevelText;
+    [SerializeField] private TextMeshProUGUI _towerInfo;
     private void Start()
     {
         _towerUpgradePanel.SetActive(false);
@@ -23,11 +23,11 @@ public class TowerSelection : MonoBehaviour
                 Tower tower = hit.collider.transform.root.GetComponent<Tower>();
                 if (tower != null)
                 {
-                    Debug.Log("Text reference: " + _currentLevelText);
+                    Debug.Log("Text reference: " + _towerInfo);
                     Debug.Log("Selected tower: " + _selectedTower);
                   
                     _selectedTower = tower;
-                    _currentLevelText.text = "Level: " + _selectedTower.CurrentLevel;
+                    _towerInfo.text = "Tower - Lvl. " + _selectedTower.CurrentLevel;
                     _towerUpgradePanel.SetActive(true);
                     Debug.Log("Selected Tower: " + _selectedTower.name);
 

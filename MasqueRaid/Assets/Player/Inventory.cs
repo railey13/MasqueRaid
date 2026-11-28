@@ -14,6 +14,10 @@ public class Inventory : MonoBehaviour {
     private Dictionary<ScriptableDrops, Slots> _inventory = new Dictionary<ScriptableDrops, Slots>();   
     public Dictionary<ScriptableDrops, Slots> InventoryDictionary { get { return _inventory; } }
 
+    [Header("Debug")]
+    [SerializeField] private ScriptableDrops wood;
+    [SerializeField] private ScriptableDrops stone;
+
     public void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -21,6 +25,11 @@ public class Inventory : MonoBehaviour {
         else {
             Destroy(gameObject);
         }
+    }
+
+    public void DebugAddResource() {
+        AddItem(wood, 99);
+        AddItem(stone, 99);
     }
 
     public void AddItem(ScriptableDrops item, int amount) {
